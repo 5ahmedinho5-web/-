@@ -1,0 +1,170 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Aref+Ruqaa:wght@700&family=Tajawal:wght@700;800;900&display=swap');
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Subtle, refined interactive feedback on clickable elements */
+button:not(:disabled),
+a,
+[role="button"],
+.cursor-pointer,
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+summary {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, 
+              box-shadow 0.15s ease, 
+              background-color 0.15s ease, 
+              border-color 0.15s ease;
+}
+
+button:not(:disabled):active,
+a:active,
+[role="button"]:active,
+.cursor-pointer:active {
+  transform: scale(0.985);
+}
+
+/* Elegant & Subtle CTA button and surrounding box animations */
+@keyframes cta-shimmer-subtle {
+  0% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(-200%) skewX(-20deg);
+  }
+}
+
+@keyframes cta-glow-subtle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.99);
+    filter: blur(6px);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.01);
+    filter: blur(8px);
+  }
+}
+
+@keyframes cta-border-flow-subtle {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-cta-shimmer {
+  animation: cta-shimmer-subtle 3.5s ease-in-out infinite;
+}
+
+.animate-cta-glow {
+  animation: cta-glow-subtle 3s ease-in-out infinite;
+}
+
+.animate-cta-flow {
+  background-size: 200% 200%;
+  animation: cta-border-flow-subtle 3.5s ease infinite;
+}
+
+/* Luxury Sidebar & Menu Item Animations */
+@keyframes menu-item-in {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) scale(0.97);
+  }
+  70% {
+    transform: translateX(-2px) scale(1.005);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes menu-ripple-burst {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+@keyframes menu-active-glow {
+  0%, 100% {
+    box-shadow: 0 4px 14px -1px rgba(0, 102, 68, 0.28), 0 0 0 1px rgba(52, 211, 153, 0.35);
+  }
+  50% {
+    box-shadow: 0 6px 20px 0 rgba(0, 102, 68, 0.42), 0 0 0 2px rgba(52, 211, 153, 0.6);
+  }
+}
+
+.animate-menu-item-in {
+  animation: menu-item-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-menu-ripple {
+  animation: menu-ripple-burst 0.55s ease-out forwards;
+}
+
+.animate-menu-active {
+  animation: menu-active-glow 2.2s ease-in-out infinite;
+}
+
+/* Localized Option Selection & Tactile Micro-Animations */
+@keyframes option-pop {
+  0% {
+    transform: scale(0.95);
+  }
+  60% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes option-flash {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.animate-option-selected {
+  animation: option-pop 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-option-flash {
+  animation: option-flash 0.4s ease-out forwards;
+}
+
+
+

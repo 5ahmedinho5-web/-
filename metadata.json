@@ -1,0 +1,6 @@
+{
+  "name": "نجمة",
+  "description": "متجر إلكتروني احترافي لحزم تعزيز الحضور على Google Maps والتقييمات للأنشطة التجارية في السعودية والخليج",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
